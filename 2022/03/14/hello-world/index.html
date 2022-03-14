@@ -101,30 +101,6 @@
     <!-- 预加载动画 -->
     <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">loading...</div>
-  </div>
-</div>
-
-<script>
-  var endLoading = function () {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loader').classList.add("loading");
-  }
-  window.addEventListener('DOMContentLoaded',endLoading);
-  
-</script>
-
     
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
@@ -1180,58 +1156,6 @@
 
     
     <!-- 渲染左下角音乐播放器 -->
-    
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
-<style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8062553743"
-  fixed='true'
-  autoplay='false'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.7'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
-  }
-</style> -->
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
 
     <!-- 图片放大 -->

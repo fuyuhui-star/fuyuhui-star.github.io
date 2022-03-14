@@ -101,30 +101,6 @@
     <!-- 预加载动画 -->
     <!-- 页面预加载动画 -->
 
-<div id='loader'>
-  <link rel="stylesheet" href="/js/loaded/index.css" >
-  <div class="loading-left-bg"></div>
-  <div class="loading-right-bg"></div>
-  <div class="spinner-box">
-    <div class="configure-border-1">
-      <div class="configure-core"></div>
-    </div>
-    <div class="configure-border-2">
-      <div class="configure-core"></div>
-    </div>
-    <div class="loading-word">loading...</div>
-  </div>
-</div>
-
-<script>
-  var endLoading = function () {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loader').classList.add("loading");
-  }
-  window.addEventListener('DOMContentLoaded',endLoading);
-  
-</script>
-
     
     <!-- 判断是否为暗黑风格 -->
     <!-- 判断是否为黑夜模式 -->
@@ -1316,10 +1292,112 @@
         :data="listData"
         :class-option="classOption"
         class="warp"
-        style="height: 0px"
+        style="height: 180px"
       >
         <ul class="index-notice-content__ul">
           
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a href="/archives" title="#博客更新到2.0了" style="color:red">
+                      #博客更新到2.0了
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="color:red">
+                    2021-04-28
+                  </div>
+                
+              
+            </li>
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 轮播图支持三种模式了，功能也增强了 ~" style="color:red">
+                      #新增 轮播图支持三种模式了，功能也增强了 ~
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="color:red">
+                    2021-04-28
+                  </div>
+                
+              
+            </li>
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 支持二级导航" style="color:blue">
+                      #新增 支持二级导航
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="color:blue">
+                    2021-04-28
+                  </div>
+                
+              
+            </li>
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 归档，分类等页面头部图片位置可以设置为视频 ~" style="color:#42b983">
+                      #新增 归档，分类等页面头部图片位置可以设置为视频 ~
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="color:#42b983">
+                    2021-04-28
+                  </div>
+                
+              
+            </li>
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 头部导航可以设置为在顶部透明，并且可以任意设置背景颜色了 ~" style="">
+                      #新增 头部导航可以设置为在顶部透明，并且可以任意设置背景颜色了 ~
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="">
+                    2021-04-28
+                  </div>
+                
+              
+            </li>
+          
+            <li>
+              
+                <div class="index-notice-content__title">
+                  
+                    <a target="_blank" rel="noopener" href="http://baidu.com" title="#新增 首页增加了座右铭和公告栏目 ~" style="">
+                      #新增 首页增加了座右铭和公告栏目 ~
+                    </a>
+                  
+                </div>
+                
+                  <div class="index-notice-content__date" style="">
+                    2021-04-28
+                  </div>
+                
+              
+            </li>
            
         </ul>
       </vue-seamless-scroll>
@@ -1334,7 +1412,7 @@
 <script>
   var seamless = JSON.parse('false');
   seamless = seamless ? 0 : 30;
-  var listData = '' || '';
+  var listData = '[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]' || '';
   listData = listData.split(',');
   var vm = new Vue({
     el: '#appIndexNotice',
@@ -1623,7 +1701,7 @@
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Mon Mar 14 2022 20:51:57 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Mon Mar 14 2022 22:05:03 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2022-03-14 日</div>
           
         </div>
@@ -1826,58 +1904,6 @@
 
     
     <!-- 渲染左下角音乐播放器 -->
-    
-      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
-<style>
-.aplayer .aplayer-lrc p {
-  
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px !important;
-}
-
-.aplayer .aplayer-lrc p.aplayer-lrc-current {
-  
-  font-size: 15px;
-  color: #42b983;
-}
-
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-  left: -66px !important;
-}
-
-.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-  left: 0px !important;
-}
-
-
-</style>
-<meting-js  
-  class=""
-  server="tencent"
-  type="playlist"
-  id="8062553743"
-  fixed='true'
-  autoplay='false'
-  theme='#42b983'
-  loop='all'
-  order='random'
-  preload='auto'
-  volume='0.7'
-  list-folded='true'
->
-</meting-js>
-
-<!-- <style>
-  #aplayer {
-    position: fixed;
-    left: 0;
-    bottom: 300px;
-  }
-</style> -->
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
     
 
     <!-- 图片放大 -->
